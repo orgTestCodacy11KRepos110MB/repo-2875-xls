@@ -64,7 +64,7 @@ jobs:
           REPO=${{ github.repository }}
           BRANCH=${{ github.ref }}
 
-          echo "Fetching list of cache key"
+          echo "Fetching list of cache keys"
           gh actions-cache list -R $REPO -B $BRANCH
 
           # Do not fail if unable to clean up (i.e. no cache were found).
