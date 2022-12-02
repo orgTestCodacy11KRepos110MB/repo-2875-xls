@@ -51,6 +51,9 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     timeout-minutes: 60
+    permissions:
+      contents: read
+      actions: write
     steps:
       - uses: actions/checkout@v3
       - name: Cleanup older Bazel Caches
